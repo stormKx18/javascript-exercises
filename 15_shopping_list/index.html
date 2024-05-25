@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+        <li>Hi</li>
+    </ul>
+
+    <script>
+        const ulElement = document.querySelector("ul");
+        ulElement.style["backgroundColor"]='#f4f4f4'; 
+
+        const inputElement = document.querySelector("input");
+        inputElement.style["backgroundColor"]='lightblue';
+
+        const buttonElement = document.querySelector("button");
+        buttonElement.style["backgroundColor"]="black";
+        buttonElement.style["color"]="white";
+
+    </script>
+  </body>
+</html>
