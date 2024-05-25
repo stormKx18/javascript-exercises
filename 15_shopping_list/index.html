@@ -41,6 +41,12 @@
         buttonElement.style["backgroundColor"]="black";
         buttonElement.style["color"]="white";
 
+        buttonElement.addEventListener("click",()=>{
+            let val= inputElement.value;
+            inputElement.value ="";
+            console.log(val);
+        });
+
     </script>
   </body>
 </html>
