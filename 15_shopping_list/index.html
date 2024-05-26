@@ -27,10 +27,12 @@
     </div>
 
     <ul>
-        <li>Hi</li>
+        <li>Shopping list elements:</li>
     </ul>
 
     <script>
+        //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#active_learning_a_dynamic_shopping_list
+        
         const ulElement = document.querySelector("ul");
         ulElement.style["backgroundColor"]='#f4f4f4'; 
 
@@ -44,8 +46,29 @@
         buttonElement.addEventListener("click",()=>{
             let val= inputElement.value;
             inputElement.value ="";
-            console.log(val);
+
+            const li_tmp = document.createElement("li");
+            const span_tmp = document.createElement("span");
+            const btn_tmp = document.createElement("button");
+
+            span_tmp.textContent=val;
+            btn_tmp.textContent="Delete";
+
+            li_tmp.appendChild(span_tmp);
+            li_tmp.appendChild(btn_tmp);
+            ulElement.appendChild(li_tmp);
+
+            li_tmp.addEventListener("click",(e)=>{
+              //console.log(e.target.parentNode);
+              e.target.parentNode.remove();
+              inputElement.focus();
+            });
+
+            inputElement.focus();
         });
+
+
+
 
     </script>
   </body>
